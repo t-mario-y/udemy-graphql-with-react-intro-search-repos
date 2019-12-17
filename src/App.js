@@ -25,7 +25,7 @@ const App = () => {
                 {data.search.edges.map(edge => {
                   const node = edge.node;
                   return (
-                    <li>
+                    <li key={node.id}>
                       <a href={node.url} target="#">
                         {node.nameWithOwner}
                       </a>
