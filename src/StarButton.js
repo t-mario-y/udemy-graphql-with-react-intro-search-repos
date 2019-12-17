@@ -16,7 +16,7 @@ const StarButton = props => {
           });
         }}
       >
-        {starCountString} | {isStarred ? "⭐️" : "🐶"}
+        {starCountString} | {isStarred ? "⭐️" : "🐶"}
       </button>
     );
   };
