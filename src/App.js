@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ApolloProvider, Query } from "react-apollo";
 import client from "./client";
-import SEARCH_RESPOSITORIES from "./graphql";
+import { SEARCH_RESPOSITORIES } from "./graphql";
 import StarButton from "./StarButton";
 
 const App = () => {
