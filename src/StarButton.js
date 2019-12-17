@@ -7,11 +7,11 @@ const StarButton = props => {
   const totalCount = props.node.stargazers.totalCount;
   const isStarred = props.node.viewerHasStarred;
   const starCountString = totalCount === 1 ? "1 star" : `${totalCount}stars`;
-  const StarStatus = ({ addStar }) => {
+  const StarStatus = ({ addOrRemoveStar }) => {
     return (
       <button
         onClick={() => {
-          addStar({
+          addOrRemoveStar({
             variables: { input: { starrableId: node.id } }
           });
         }}
@@ -22,7 +22,7 @@ const StarButton = props => {
   };
   return (
     <Mutation mutation={!isStarred ? ADD_STAR : REMOVE_STAR}>
-      {addStar => <StarStatus addStar={addStar} />}
+      {addOrRemoveStar => <StarStatus addOrRemoveStar={addOrRemoveStar} />}
     </Mutation>
   );
 };
